@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+
+</head>
+
+<body>
+    Please select a color which you want to apply on background
+    <select id="color" onchange="document.body.style.backgroundColor = document.getElementById('color').value">
+        <option value="#">Choose the Color</option>
+        <option value="aqua">Aqua</option>
+        <option value="green">Green</option>
+        <option value="red">Red</option>
+        <option value="gray">Gray</option>
+        <option value="blue">Blue</option>
+    </select>
+    <br>
+    <button onclick="Data()">Submit</button>
+    <script>
+
+        function Data() {
+
+            document.cookie = document.getElementById("color").value;
+            alert("You Choose  " + document.cookie + " color");
+
+        }
+
+    </script>
+</body>
+
+</html>
